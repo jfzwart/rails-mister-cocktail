@@ -1,0 +1,11 @@
+<h1>Doses#show</h1>
+<p>Find me in app/views/doses/show.html.erb</p>
+
+
+<ul>
+  <% @doses.each do |dose| %>
+  <li> <%= link_to dose.name, dose_path(dose) %> </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a new dose', new_dose_path(@dose) %>
