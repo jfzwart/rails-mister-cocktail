@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+
   end
 
   def new
@@ -36,7 +37,7 @@ class CocktailsController < ApplicationController
   def destroy
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
-    redirect_to cocktail_url, notice: 'Cocktail was removed'
+    redirect_to cocktails_path, notice: 'Cocktail was removed'
   end
 
   private
